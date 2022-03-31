@@ -1,0 +1,32 @@
+$backgroundcolor: rgb(255, 163, 42);
+$textcolor: black;
+
+.menu-container{
+    display: grid;
+    align-items: center;
+    background-color: $backgroundcolor;
+    grid-template-columns: 14vw 1fr;
+}
+
+.logo{
+    text-align: center;
+    font-size: 1.2vw;
+}
+
+ul{
+    display: flex;
+    align-items: center;
+    padding: 0px;
+
+    li{
+        margin: 0 30px;
+        list-style: none;
+        text-decoration: none;
+
+        a{
+            text-decoration: none;
+            color: $textcolor;
+            font-size: 1vw;
+        }
+    }
+}

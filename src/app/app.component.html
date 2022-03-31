@@ -1,5 +1,9 @@
-<h1>Hello world</h1>
+<app-top-bar></app-top-bar>
 
+<ul>
+  <li *ngFor="let food of menu">{{food}}</li>
+</ul>
+  
 <app-food-type></app-food-type>
 
   <!-- <div class="terminal" [ngSwitch]="selection.value">
