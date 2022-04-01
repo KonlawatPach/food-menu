@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { FoodTypeComponent } from './food-type/food-type.component';
 import { TopBarComponent } from './top-bar/top-bar.component';
 import { FoodboxComponent } from './foodbox/foodbox.component';
+import { ShowmenuComponent } from './showmenu/showmenu.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     FoodTypeComponent,
     TopBarComponent,
-    FoodboxComponent
+    FoodboxComponent,
+    ShowmenuComponent
   ],
   imports: [
     BrowserModule,
