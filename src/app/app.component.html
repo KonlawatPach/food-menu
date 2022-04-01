@@ -1,18 +1,23 @@
 <app-top-bar></app-top-bar>
 
 <div class="bodypage">
-  <app-food-type></app-food-type>
+  <app-food-type (typechange)="changeFoodType($event);"></app-food-type>
 
   <div class="menu">
-    <div class="menuheading">
-      <h2>อาหารจานหลัก</h2>
+    <div class="menuheading" [ngSwitch]="foodtype">
+      <h2 *ngSwitchDefault="'maindish'">อาหารจานหลัก</h2>
+      <h2 *ngSwitchCase="'gerefood'">อาหารเกเร</h2>
     </div>
     
     <div class="menubody">
-      <app-foodbox *ngFor="let foods of menu" [food]="foods"></app-foodbox>
+      <div *ngFor="let foods of menu">
+        <app-foodbox *ngIf="foods.type == foodtype" [food]="foods"></app-foodbox>
+      </div>
     </div>
+
   </div>
 </div>
+
 
   <!-- <div class="terminal" [ngSwitch]="selection.value">
       <pre *ngSwitchDefault>ng generate component xyz</pre>

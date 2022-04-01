@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-food-type',
@@ -6,8 +6,13 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./food-type.component.scss']
 })
 export class FoodTypeComponent implements OnInit {
+  @Output() typechange = new EventEmitter();
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  changeFoodType(type:string){
+    this.typechange.emit(type);
   }
 }

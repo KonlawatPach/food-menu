@@ -1,6 +1,6 @@
 <div class="foodbox">
     <h3 class="foodname">{{food.name}}</h3>
-    <img src={{food.picture}} alt='รูปภาพ{{food.name}}'>
-    <p>ธรรมดา:{{food.normal}} &nbsp;&nbsp;&nbsp;&nbsp; พิเศษ:{{food.extra}}</p>
+    <img src='{{food.picture}}' alt='รูปภาพ{{food.name}}'>
+    <p>ธรรมดา {{food.normal}} บาท &nbsp;&nbsp;&nbsp;&nbsp; พิเศษ {{food.extra}} บาท</p>
     <button type="button" (click)="showFoodData(food.name)">ดูรายละเอียด</button>
 </div>

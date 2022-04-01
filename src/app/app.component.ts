@@ -1,4 +1,5 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { foodlist } from './foodlist';
 
 @Component({
   selector: 'app-root',
@@ -6,12 +7,10 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  menu = [
-            {
-                name: 'ข้าวผัดแมว',
-                picture: "",
-                normal: 30,
-                extra: 40
-            }
-        ];
+  foodtype:string = "maindish";
+  menu = foodlist;
+
+  changeFoodType(type:string){
+    this.foodtype = type;
+  }
 }
