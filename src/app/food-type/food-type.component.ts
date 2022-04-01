@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-food-type',
@@ -6,10 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./food-type.component.scss']
 })
 export class FoodTypeComponent implements OnInit {
-
   constructor() { }
 
   ngOnInit(): void {
   }
-
 }

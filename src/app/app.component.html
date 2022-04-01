@@ -1,13 +1,15 @@
 <app-top-bar></app-top-bar>
+<app-food-type></app-food-type>
 
 <div class="menu">
-  <div *ngFor="let food of menu">
-    <h3>{{food.name}}</h3>
-    <img src={{food.picture}} width="300px" height="150px" style="object-fit: fill;">
+  <div class="menuheading">
+    <h2>อาหารจานหลัก</h2>
+  </div>
+  
+  <div class="menubody">
+    <app-foodbox *ngFor="let foods of menu" [food]="foods"></app-foodbox>
   </div>
 </div>
-  
-<app-food-type></app-food-type>
 
   <!-- <div class="terminal" [ngSwitch]="selection.value">
       <pre *ngSwitchDefault>ng generate component xyz</pre>
