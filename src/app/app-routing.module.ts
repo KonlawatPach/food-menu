@@ -1,13 +1,17 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { ShowmenuComponent } from './showmenu/showmenu.component';
+import { ReserveComponent } from './menu_bar/reserve/reserve.component';
 import { DeliveryComponent } from './menu_bar/delivery/delivery.component';
 import { ContactComponent } from './menu_bar/contact/contact.component';
-import { ShowmenuComponent } from './showmenu/showmenu.component';
+
 
 const routes: Routes = [
+  { path: '', redirectTo: 'home', pathMatch: 'full' },
+  { path: 'home', component:ShowmenuComponent },
   { path: 'contact', component: ContactComponent },
   { path: 'delivery', component: DeliveryComponent },
-  { path: 'home', component:ShowmenuComponent }
+  { path: 'reserve', component: ReserveComponent },
 ];
 
 @NgModule({
@@ -15,4 +19,4 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
-export const routingComponents = [ContactComponent, DeliveryComponent]
+export const routingComponents = [ShowmenuComponent, DeliveryComponent, ReserveComponent, ContactComponent]
