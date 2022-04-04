@@ -70,6 +70,13 @@ export const foodlist = [
         extra: 50
     },
     {
+        name: 'เปาปลาเค็ม',
+        picture: "https://i.joylada.net/11635385/profile-image/1cdb5752-d372-4a37-b927-bc04f7b24fb6.jpg",
+        type: "appetizer",
+        normal: 40,
+        extra: 50
+    },
+    {
         name: 'หมูทอด',
         picture: "https://i.ytimg.com/vi/2CxqYnDpkk8/maxresdefault.jpg",
         type: "appetizer",
