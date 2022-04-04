@@ -8,11 +8,7 @@
             <h2 *ngSwitchCase="'dessertanddrink'">ของหวานและเครื่องดื่ม</h2>
             <h2 *ngSwitchCase="'any'">อื่นๆ</h2>
         </div>
-
-        <!-- *ngFor="let foods of menu" -->
-        <!-- *ngIf="foods.type == foodtype" -->
-        <!-- [food]="foods" -->
-
+        
         <div class="menubody">
             <div *ngFor="let foods of menu">
                 <app-foodbox [food]="foods"></app-foodbox>

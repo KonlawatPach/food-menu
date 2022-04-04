@@ -1,0 +1,42 @@
+@mixin border(){
+    border-color: rgba(0, 0, 0, 0.534);
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 8px;
+}
+
+.reservebox{
+    @include border();
+    background-color: rgb(255, 252, 246);
+    margin: 2vw 6vw;
+    height: max-content;
+    padding-bottom: 1vw;
+    text-align: center;
+
+    .reservebody{
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        justify-content: center;
+        grid-column-gap: 2vw;
+    }
+    
+    .imagedescription{
+        @include border();
+        margin: 4vw 4vw 2vw 4vw;
+        height: max-content;
+        padding-bottom: 1vw;
+        background-color: rgb(223, 223, 223);
+
+        .imagedes{
+            display: grid;
+            grid-template-columns: repeat(6, auto);
+            align-items: center;
+            
+            img{
+                width: 5vw;
+                height: 5vw;
+            }
+        }
+    }
+}
+

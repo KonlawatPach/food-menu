@@ -19,14 +19,19 @@ ul{
     padding: 0px;
 
     li{
-        margin: 0 2vw;
         list-style: none;
-        text-decoration: none;
 
         a{
+            font-weight: bold;
+            padding: 0.6vw 2vw;
+            margin: 0.2vw 1vw;
+            border-radius: 5vw;
+            display: block;
             text-decoration: none;
             color: $textcolor;
             font-size: 1vw;
         }
+
+        a:hover{ background-color: rgb(255, 212, 159); }
     }
 }

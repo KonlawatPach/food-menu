@@ -6,6 +6,7 @@ import { AppComponent  } from './app.component';
 import { FoodTypeComponent } from './menu_bar/showmenu/food-type/food-type.component';
 import { TopBarComponent } from './top-bar/top-bar.component';
 import { FoodboxComponent } from './menu_bar/showmenu/foodbox/foodbox.component';
+import { TableStatusComponent } from './menu_bar/reserve/table-status/table-status.component';
 // import { ShowmenuComponent } from './showmenu/showmenu.component';
 // import { ContactComponent } from './menu_bar/contact/contact.component';
 // import { DeliveryComponent } from './menu_bar/delivery/delivery.component';
@@ -19,6 +20,7 @@ import { FoodboxComponent } from './menu_bar/showmenu/foodbox/foodbox.component'
     FoodboxComponent,
     // ShowmenuComponent,
     routingComponents,
+    TableStatusComponent,
     // ContactComponent,
     // DeliveryComponent,
     // ReserveComponent
