@@ -7,15 +7,26 @@ import { foodlist } from '../foodlist';
   styleUrls: ['./showmenu.component.scss']
 })
 export class ShowmenuComponent implements OnInit {
-  constructor() { }
+  constructor() {
+    this.loadFoodlist();
+  }
 
   ngOnInit(): void {
   }
 
   foodtype:string = "maindish";
-  menu = foodlist;
+  menu = [{name:"", picture:"", normal:0, extra:0}];
+  allmenu = foodlist;
 
   changeFoodType(type:string){
     this.foodtype = type;
+    this.loadFoodlist();
+  }
+
+  loadFoodlist(){
+    this.menu = [];
+    for(let f of this.allmenu){
+      if(f.type == this.foodtype) this.menu.push(f);
+    }
   }
 }

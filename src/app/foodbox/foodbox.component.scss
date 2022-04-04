@@ -14,27 +14,30 @@
     height: 20vw;
     width: 20vw;
     text-align: center;
-}
 
-.foodname{
-    font-size: 1.2vw;
-}
+    .foodname{
+        font-size: 1.2vw;
+    }
 
-img{
-    @include border();
-    height: 10vw;
-    width: 16vw;
-    object-fit: fill;
-}
+    img{
+        @include border();
+        height: 10vw;
+        width: 16vw;
+        object-fit: cover;
+    }
 
-button{
-    @include border();
-    width: 16vw;
-    height: 2vw;
-    cursor: pointer;
-    background-color: rgb(185, 227, 255);
-}
+    p{
+        font-size: 1vw;
+    }
 
-button:hover{
-    background-color: rgb(154, 215, 255);
+    button{
+        @include border();
+        width: 16vw;
+        height: 2vw;
+        cursor: pointer;
+        background-color: rgb(185, 227, 255);
+    }
+    button:hover{
+        background-color: rgb(154, 215, 255);
+    }
 }

@@ -1,6 +1,11 @@
 <div class="foodbox">
     <h3 class="foodname">{{food.name}}</h3>
     <img src='{{food.picture}}' alt='รูปภาพ{{food.name}}'>
-    <p>ธรรมดา {{food.normal}} บาท &nbsp;&nbsp;&nbsp;&nbsp; พิเศษ {{food.extra}} บาท</p>
+    <div *ngIf="food.extra > 0; else noextra">
+        <p>ธรรมดา {{food.normal}} บาท&nbsp;&nbsp;&nbsp;&nbsp;พิเศษ {{food.extra}} บาท</p>
+    </div>
+    <ng-template #noextra>
+        <p>ราคา {{food.normal}} บาท</p>
+    </ng-template>
     <button type="button" (click)="showFoodData(food.name)">ดูรายละเอียด</button>
 </div>

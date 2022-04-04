@@ -1,0 +1,44 @@
+@mixin border(){
+    border-color: black;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 16px;
+}
+
+.deliverybox{
+    @include border();
+    background-color: whitesmoke;
+    margin: 2vw 8vw;
+    height: 70vh;
+    text-align: center;
+}
+
+.deliverybody{
+    @include border();
+    background-color: white;
+    display: grid;
+    height: 56vh;
+    width: 96%;
+    grid-template-columns: 60% 40%;
+    margin: 0 auto;
+    align-content: center;
+
+    .deliverycontent{
+        
+    }
+
+    .deliveryimage{
+        img{
+            width: 90%;
+            height: 40vh;
+            animation-name: fade;
+            animation-duration: 6s;
+            animation-iteration-count: infinite;
+        }
+    }
+}
+
+    @keyframes fade {
+        0% {opacity: 0}
+        30% {opacity: 1}
+    }
