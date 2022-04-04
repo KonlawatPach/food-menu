@@ -80,8 +80,8 @@ export const foodlist = [
         name: 'น้ำดื่มคริสตัล 1.5 ลิตร',
         picture: "https://static.bigc.co.th/media/catalog/product/cache/2/image/17f82f742ffe127f42dca9de82fb58b1/8/8/8851952350161.jpg",
         type: "dessertanddrink",
-        normal: 40,
-        extra: 50
+        normal: 15,
+        extra: 0
     },
     
     {

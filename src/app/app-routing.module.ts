@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { ShowmenuComponent } from './showmenu/showmenu.component';
+import { ShowmenuComponent } from './menu_bar/showmenu/showmenu.component';
 import { ReserveComponent } from './menu_bar/reserve/reserve.component';
 import { DeliveryComponent } from './menu_bar/delivery/delivery.component';
 import { ContactComponent } from './menu_bar/contact/contact.component';
