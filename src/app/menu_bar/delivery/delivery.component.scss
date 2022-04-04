@@ -7,9 +7,10 @@
 
 .deliverybox{
     @include border();
-    background-color: rgb(255, 252, 246);
-    margin: 2vw 8vw;
-    height: 76vh;
+    background-color: rgb(245, 245, 245);
+    margin: 2vw 6vw;
+    height: max-content;
+    padding-bottom: 1vw;
     text-align: center;
 
     p{

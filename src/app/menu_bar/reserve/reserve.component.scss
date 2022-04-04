@@ -7,11 +7,13 @@
 
 .reservebox{
     @include border();
-    background-color: rgb(255, 252, 246);
+    background-color: rgb(245, 245, 245);
     margin: 2vw 6vw;
     height: max-content;
     padding-bottom: 1vw;
     text-align: center;
+
+    .reserveheading{ font-size: 1.6vw; }
 
     .reservebody{
         display: grid;
@@ -33,6 +35,10 @@
             align-items: center;
             
             img{
+                @include border();
+                background-color: white;
+                border-radius: 100%;
+                padding: 0.4vw;
                 width: 5vw;
                 height: 5vw;
             }
