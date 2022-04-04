@@ -11,7 +11,7 @@
         <h4>รายละเอียดรูปภาพ</h4>
         <div class="imagedes">
             <div *ngFor="let img of imagename">
-                <img src="../../../../assets/tableicon/{{img}}.png">
+                <img src="assets/tableicon/{{img}}.png">
                 <div [ngSwitch]="img">
                     <p *ngSwitchDefault>สถานะโต๊ะ : ว่าง</p>
                     <p *ngSwitchCase="'used'">สถานะโต๊ะ : ถูกใช้งาน</p>

@@ -1,7 +1,7 @@
 <div class="tablebox">
     <h4>โต๊ะหมายเลข {{table.number}}</h4>
-    <img src="../../../../assets/tableicon/{{table.type}}.png" class="typeimg" alt="Table NO.{{table.number}}">
-    <img src="../../../../assets/tableicon/{{table.status}}.png" class="statusimg" alt="Table NO.{{table.number}}">
+    <img src="assets/tableicon/{{table.type}}.png" class="typeimg" alt="Table NO.{{table.number}}">
+    <img src="assets/tableicon/{{table.status}}.png" class="statusimg" alt="Table NO.{{table.number}}">
     <div class="textbox">
         <div [ngSwitch]="table.status">
             <p *ngSwitchDefault>สถานะโต๊ะ : ว่าง</p>
