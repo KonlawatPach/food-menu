@@ -7,10 +7,15 @@
 
 .deliverybox{
     @include border();
-    background-color: whitesmoke;
+    background-color: rgb(255, 250, 238);
     margin: 2vw 8vw;
-    height: 70vh;
+    height: 76vh;
     text-align: center;
+
+    p{
+        text-align: start;
+        margin: 2vw auto auto 5vw;
+    }
 }
 
 .deliverybody{
@@ -20,14 +25,39 @@
     height: 56vh;
     width: 96%;
     grid-template-columns: 60% 40%;
-    margin: 0 auto;
-    align-content: center;
+    margin: 1vw auto 1vw auto;
 
     .deliverycontent{
+
+        .contentheader{
+            font-size: 1.2vw;
+        }
+
+        table{
+            margin: 1vw auto 2vw auto;
+            border-collapse: collapse;
+            width: 90%;
+
+            th, td{
+                border-color: black;
+                border-width: 2px;
+                border-style: solid;
+                padding: 1vw;
+            }
+
+            th{ background-color: rgb(255, 247, 221); }
+            tr:nth-child(odd){ background-color: rgb(255, 255, 255); }
+            tr:nth-child(even){ background-color: rgb(250, 250, 250); }
+            tr td:nth-child(1){ text-align: start; }
+            tr:hover{ background-color: rgb(210, 210, 210); }
+        }       
         
     }
 
     .deliveryimage{
+        display: grid;
+        align-content: center;
+
         img{
             width: 90%;
             height: 40vh;
