@@ -2,6 +2,11 @@
 <div class="reservebox">
 
     <h2 class="reserveheading">สถานะโต๊ะในร้าน Gere Restaurant</h2>
+
+    <div class="loading">
+        <div class="loader"></div>
+        <p>โหลดข้อมูลโต๊ะสักครู่</p>
+    </div>
     <div class="reservebody">
         <div *ngFor="let tables of tableLists">
             <app-table-status [table]="tables" ></app-table-status>

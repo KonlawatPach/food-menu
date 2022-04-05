@@ -1,42 +1,4 @@
-export const tablelist = [
-    {
-        number: 1,
-        status: "idle",
-        type: "indoor"
-    },
-    {
-        number: 2,
-        status: "idle",
-        type: "indoor"
-    },
-    {
-        number: 3,
-        status: "used",
-        type: "indoor"
-    },
-    {
-        number: 4,
-        status: "cleaning",
-        type: "indoor"
-    },
-    {
-        number: 5,
-        status: "idle",
-        type: "outdoor"
-    },
-    {
-        number: 6,
-        status: "idle",
-        type: "outdoor"
-    },
-    {
-        number: 7,
-        status: "idle",
-        type: "outdoor"
-    },
-    {
-        number: 8,
-        status: "broken",
-        type: "outdoor"
-    },
-]
+export const tablelist = async () => await fetch("https://script.google.com/macros/s/AKfycbx08MwBf9CdAtW1Qnae4PZMB2jsV9Lu2prb__10qLBRmCXAEDPOuByArckXXz4WO2A8/exec")
+    .then(function(response) {
+        return response.json();
+    }).then( function(myJson:{number: number, status: string, type: string}[]) {});
