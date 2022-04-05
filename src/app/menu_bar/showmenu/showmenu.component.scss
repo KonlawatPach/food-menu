@@ -1,3 +1,9 @@
+app-alert-food{
+    display: none;
+    z-index: 5;
+    position: fixed;
+}
+
 .bodypage{
     display: grid;
     grid-template-columns: 14% auto;

@@ -6,7 +6,7 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
   styleUrls: ['./alert-food.component.scss']
 })
 export class AlertFoodComponent implements OnInit {
-  @Input() food = {name:"", picture:"", type:"", normal:0, extra:0};
+  @Input() food = {name:"", picture:"", type:"", normal:0, extra:0, description: ""};
   @Output() closealert = new EventEmitter();
 
   constructor() { }

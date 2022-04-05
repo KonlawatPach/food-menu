@@ -7,10 +7,9 @@ import { foodlist } from '../../foodlist';
   styleUrls: ['./showmenu.component.scss']
 })
 export class ShowmenuComponent implements OnInit {
-  @Output() showalert = new EventEmitter();
   foodtype:string = "maindish";
-  menu = [{name:"", picture:"", normal:0, extra:0}];
-  alertfood = {name:"", picture:"", normal:0, extra:0};
+  menu = [{name:"", picture:"", type:"",  normal:0, extra:0, description: ""}];
+  alertfood = {name:"", picture:"", type:"", normal:0, extra:0, description: ""};
   allmenu = foodlist;
   
   constructor() {
@@ -32,7 +31,15 @@ export class ShowmenuComponent implements OnInit {
     }
   }
 
-  showFoodAlert(){
-    this.showalert.emit();
+  element = document.getElementsByTagName('app-alert-food') as HTMLCollectionOf<HTMLElement>;
+  foodalert = {name: '', picture: "", type: "", normal: 0, extra: 0, description: ""}
+
+  showAlert(fooddata:{name: string, picture: string, type: string, normal: number, extra: number, description: string}){
+    this.foodalert = fooddata;
+    this.element[0].style.display = "block";
+  }
+
+  closeAlert(){
+    this.element[0].style.display = "none";
   }
 }

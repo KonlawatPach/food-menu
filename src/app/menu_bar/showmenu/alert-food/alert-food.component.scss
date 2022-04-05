@@ -14,7 +14,8 @@
     height: 100%;
 
     .alertbox{
-        @include border();
+        // @include border();
+        border-radius: 8px;
         background-color: rgb(255, 255, 255);
         width: 80vw;
         margin: 8% auto;    
@@ -22,7 +23,7 @@
         .alertheader{
             border-radius: 8px;
             display: grid;             
-            background-color: whitesmoke;
+            background-color: rgb(228, 228, 228);
             height: 2vw;
             text-align: right;
             padding: 0.5vw 1vw;
@@ -48,7 +49,6 @@
             border-radius: 8px;
             height: max-content;
             padding: 2vw 1vw;
-            background-color: white;
             display: grid;
             grid-template-columns: 60% 40%;
 

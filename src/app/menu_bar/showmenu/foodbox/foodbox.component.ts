@@ -6,7 +6,7 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
   styleUrls: ['./foodbox.component.scss']
 })
 export class FoodboxComponent implements OnInit {
-  @Input() food = {name:"", picture:"", normal:0, extra:0};
+  @Input() food = {name:"", picture:"", type:"", normal:0, extra:0, description: ""};
   @Output() showalert = new EventEmitter();
 
   constructor() { }
@@ -15,6 +15,6 @@ export class FoodboxComponent implements OnInit {
   }
 
   showFoodData(){
-    this.showalert.emit();
+    this.showalert.emit(this.food);
   }
 }
