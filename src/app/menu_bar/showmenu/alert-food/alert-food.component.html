@@ -13,7 +13,7 @@
 
                     <p class="title">ประเภท : </p>
                     <div [ngSwitch]="food.type">
-                        <p *ngSwitchDefault="'maindish'">อาหารจานหลัก</p>
+                        <p *ngSwitchDefault>อาหารจานหลัก</p>
                         <p *ngSwitchCase="'appetizer'">อาหารทานเล่น</p>
                         <p *ngSwitchCase="'dessertanddrink'">ของหวานและเครื่องดื่ม</p>
                         <p *ngSwitchCase="'any'">อื่นๆ</p>

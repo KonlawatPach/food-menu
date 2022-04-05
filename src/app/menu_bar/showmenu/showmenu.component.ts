@@ -7,16 +7,25 @@ import { foodlist } from '../../foodlist';
   styleUrls: ['./showmenu.component.scss']
 })
 export class ShowmenuComponent implements OnInit {
+  menudata = document.getElementsByClassName('menubody') as HTMLCollectionOf<HTMLElement>;
+  loading = document.getElementsByClassName('loading') as HTMLCollectionOf<HTMLElement>;
   foodtype:string = "maindish";
   menu = [{name:"", picture:"", type:"",  normal:0, extra:0, description: ""}];
   alertfood = {name:"", picture:"", type:"", normal:0, extra:0, description: ""};
-  allmenu = foodlist;
+  allmenu = [{name:"", picture:"", type:"",  normal:0, extra:0, description: ""}];
   
   constructor() {
-    this.loadFoodlist();
+    this.getData()
   }
 
   ngOnInit(): void {
+  }
+
+  async getData() {
+    this.allmenu = await foodlist();
+    this.loadFoodlist();
+    this.menudata[0].style.display = "grid";
+    this.loading[0].style.display = "none";
   }
 
   changeFoodType(type:string){

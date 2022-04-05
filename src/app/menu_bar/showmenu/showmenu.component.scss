@@ -25,13 +25,34 @@ app-alert-food{
     }
     
     .menubody{
-        display: grid;
+        display: none;
         grid-template-columns: auto auto auto;
         justify-content: center;
+    }
+
+    .loading{
+        text-align: center;
+        display:block;
+        
+        .loader{
+            margin: 3vw auto;
+            border: 16px solid #f3f3f3;
+            border-radius: 50%;
+            border-top: 16px solid #3498db;
+            width: 120px;
+            height: 120px;
+            -webkit-animation: spin 2s linear infinite; /* Safari */
+            animation: spin 2s linear infinite;
+        }
     }
 }
 
 @keyframes fade {
     from {opacity: 0}
     to {opacity: 1}
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
 }

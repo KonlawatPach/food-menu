@@ -10,7 +10,7 @@ import { tablelist } from 'src/app/tablelist';
 export class ReserveComponent implements OnInit {
   tabledata = document.getElementsByClassName('reservebody') as HTMLCollectionOf<HTMLElement>;
   loading = document.getElementsByClassName('loading') as HTMLCollectionOf<HTMLElement>;
-  tableLists = [{number: 0, status: "", type: ""}]
+  tableLists = [{number: 0, status: "idle", type: "outdoor"}]
   
   imagename = ["idle",
               "used",
