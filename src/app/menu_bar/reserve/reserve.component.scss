@@ -31,7 +31,7 @@
 
         .imagedes{
             display: grid;
-            grid-template-columns: repeat(6, auto);
+            grid-template-columns: repeat(6, 1fr);
             align-items: center;
             
             img{
@@ -41,6 +41,29 @@
                 padding: 0.4vw;
                 width: 5vw;
                 height: 5vw;
+            }
+        }
+    }
+
+    .contact{
+        text-align: center;
+        margin-top: 1vw;
+        a{
+            text-decoration: none;
+            cursor: none;
+            button{
+                @include border();
+                border-radius: 50vw;
+                width: max-content;
+                padding: 1vw 1.6vw;
+                background-color: rgb(255, 212, 133);
+                box-shadow: inset 0 -3em 3em rgb(255, 164, 28);
+                font-size: 1vw;
+            }
+            button:hover{
+                background-color: rgb(255, 174, 25);
+                box-shadow: inset 0 -3em 3em rgb(219, 132, 0);
+                cursor: pointer;
             }
         }
     }
