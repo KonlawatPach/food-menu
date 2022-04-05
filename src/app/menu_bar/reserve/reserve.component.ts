@@ -27,16 +27,7 @@ export class ReserveComponent implements OnInit {
   }
 
   async getData() {
-    let data  = [{number: 0, status: "", type: ""}]
-
-    await fetch("https://script.google.com/macros/s/AKfycbx08MwBf9CdAtW1Qnae4PZMB2jsV9Lu2prb__10qLBRmCXAEDPOuByArckXXz4WO2A8/exec")
-    .then(function(response) {
-      return response.json();
-    }).then(function(myJson:{number: number, status: string, type: string}[]) {
-      data = myJson;
-    });
-
-    this.tableLists = data;
+    this.tableLists = await tablelist();
     this.tabledata[0].style.display = "grid";
     this.loading[0].style.display = "none";
   }
