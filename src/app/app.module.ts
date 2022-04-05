@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule, routingComponents } from './app-routing.module';
 import { AppComponent  } from './app.component';
 import { FoodTypeComponent } from './menu_bar/showmenu/food-type/food-type.component';
 import { TopBarComponent } from './top-bar/top-bar.component';
 import { FoodboxComponent } from './menu_bar/showmenu/foodbox/foodbox.component';
 import { TableStatusComponent } from './menu_bar/reserve/table-status/table-status.component';
+import { AlertFoodComponent } from './menu_bar/showmenu/alert-food/alert-food.component';
 // import { ShowmenuComponent } from './showmenu/showmenu.component';
 // import { ContactComponent } from './menu_bar/contact/contact.component';
 // import { DeliveryComponent } from './menu_bar/delivery/delivery.component';
@@ -21,6 +21,7 @@ import { TableStatusComponent } from './menu_bar/reserve/table-status/table-stat
     // ShowmenuComponent,
     routingComponents,
     TableStatusComponent,
+    AlertFoodComponent,
     // ContactComponent,
     // DeliveryComponent,
     // ReserveComponent

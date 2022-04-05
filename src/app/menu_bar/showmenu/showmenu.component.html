@@ -1,6 +1,6 @@
 <div class="bodypage">
     <app-food-type (typechange)="changeFoodType($event);"></app-food-type>
-  
+
     <div class="menu">
         <div class="menuheading" [ngSwitch]="foodtype">
             <h2 *ngSwitchDefault="'maindish'">อาหารจานหลัก</h2>
@@ -11,9 +11,10 @@
         
         <div class="menubody">
             <div *ngFor="let foods of menu">
-                <app-foodbox [food]="foods"></app-foodbox>
+                <app-foodbox [food]="foods" (showalert)="showFoodAlert();"></app-foodbox>
             </div>
         </div>
-  
+
     </div>
+
 </div>

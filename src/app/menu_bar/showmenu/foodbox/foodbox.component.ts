@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-foodbox',
@@ -7,13 +7,14 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class FoodboxComponent implements OnInit {
   @Input() food = {name:"", picture:"", normal:0, extra:0};
+  @Output() showalert = new EventEmitter();
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  showFoodData(foodname:string){
-    alert(foodname)
+  showFoodData(){
+    this.showalert.emit();
   }
 }
