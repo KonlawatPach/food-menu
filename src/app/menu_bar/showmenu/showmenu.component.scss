@@ -16,11 +16,50 @@ app-alert-food{
     }
 
     .menuheading{
-        padding: 0.1vw;
-        text-align: center;
-    
-        h2{
-            font-size: 1.4vw;
+        display: grid;
+        grid-template-columns: 20vw 20vw 20vw;
+        justify-content: space-evenly;
+        align-items: center;
+        
+
+        .headingname{
+            text-align: center;
+            display: inline-block;
+            padding: 0.1vw;
+        
+            h2{
+                font-size: 1.4vw;
+            }
+        }
+        
+        .searchbar{
+            display: inline-flex;
+            background-color: white;
+            border-color: black;
+            border-radius: 50vw;
+            padding: 0.4vw 0.8vw;
+            align-items: center;
+            height: 2vw;
+            justify-content: center;
+            width: 16vw;            
+
+            input{
+                border-color: black;
+                border-radius: 6px;
+                height: 1.2vw;
+                width: 14vw;
+                font-size: 1vw;
+            }
+            button{
+                cursor: pointer;
+                border-color: black;
+                border-radius: 6px;
+                height: 1.6vw;
+                width: 2vw;
+            }
+            button:hover{
+                background-color: rgb(201, 201, 201);
+            }
         }
     }
     
@@ -32,7 +71,7 @@ app-alert-food{
 
     .loading{
         text-align: center;
-        display:block;
+        display: block;
         
         .loader{
             margin: 3vw auto;

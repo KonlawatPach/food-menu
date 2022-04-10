@@ -4,11 +4,20 @@
 <div class="bodypage">
     <app-food-type (typechange)="changeFoodType($event);"></app-food-type>
     <div class="menu">
-        <div class="menuheading" [ngSwitch]="foodtype">
-            <h2 *ngSwitchDefault>อาหารจานหลัก</h2>
-            <h2 *ngSwitchCase="'appetizer'">อาหารทานเล่น</h2>
-            <h2 *ngSwitchCase="'dessertanddrink'">ของหวานและเครื่องดื่ม</h2>
-            <h2 *ngSwitchCase="'any'">อื่นๆ</h2>
+        <div class="menuheading">
+            <div></div>
+            <div class="headingname" [ngSwitch]="foodtype">
+                <h2 *ngSwitchDefault>อาหารจานหลัก</h2>
+                <h2 *ngSwitchCase="'all'">อาหารทั้งหมด</h2>
+                <h2 *ngSwitchCase="'appetizer'">อาหารทานเล่น</h2>
+                <h2 *ngSwitchCase="'dessertanddrink'">ของหวานและเครื่องดื่ม</h2>
+                <h2 *ngSwitchCase="'any'">อื่นๆ</h2>
+            </div>
+            <div class="searchbar">
+                <input type="text" placeholder="ค้นหาเมนู" id="searchword" #sw (keyup.enter)="loadFoodlist(sw.value);">
+                <!-- <input type="text" placeholder="ค้นหาเมนู" id="searchword" #sw (keyup)="loadFoodlist(sw.value);"> -->
+                <button (click)="loadFoodlist(sw.value);">🔎</button>
+            </div>
         </div>
         
         <div class="menubody">
