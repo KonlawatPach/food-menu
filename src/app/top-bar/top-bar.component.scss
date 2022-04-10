@@ -35,3 +35,41 @@ ul{
         a:hover{ background-color: rgb(255, 212, 159); }
     }
 }
+
+
+@media only screen and (max-width: 600px) {
+    .menu-container{
+        display: grid;
+        align-items: center;
+        background-color: $backgroundcolor;
+        grid-template-columns: 18vh 1fr;
+    }
+    
+    .logo{
+        text-align: center;
+        font-size: 1.2vh;
+    }
+    
+    ul{
+        display: flex;
+        align-items: center;
+        padding: 0px;
+    
+        li{
+            list-style: none;
+    
+            a{
+                font-weight: bold;
+                padding: 0.6vw 2vw;
+                margin: 0.2vw 1vw;
+                border-radius: 5vw;
+                display: block;
+                text-decoration: none;
+                color: $textcolor;
+                font-size: 1vh;
+            }
+    
+            a:hover{ background-color: rgb(255, 212, 159); }
+        }
+    }
+}

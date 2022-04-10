@@ -8,7 +8,7 @@ app-alert-food{
 
 .bodypage{
     display: grid;
-    grid-template-columns: 14% auto;
+    grid-template-columns: 16% auto;
 
     app-food-type{
         background-color: bisque;
@@ -49,13 +49,18 @@ app-alert-food{
                 height: 1.2vw;
                 width: 14vw;
                 font-size: 1vw;
+                border-width: 1px;
             }
             button{
                 cursor: pointer;
                 border-color: black;
+                border-width: 1px;
                 border-radius: 6px;
                 height: 1.6vw;
                 width: 2vw;
+                font-size: 1vw;
+                text-align: center;
+                padding: 0;
             }
             button:hover{
                 background-color: rgb(201, 201, 201);
@@ -78,8 +83,8 @@ app-alert-food{
             border: 16px solid #f3f3f3;
             border-radius: 50%;
             border-top: 16px solid #3498db;
-            width: 120px;
-            height: 120px;
+            width: 10vw;
+            height: 10vw;
             -webkit-animation: spin 2s linear infinite; /* Safari */
             animation: spin 2s linear infinite;
         }
@@ -94,4 +99,176 @@ app-alert-food{
 @keyframes spin {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
+}
+
+
+@media only screen and (max-width: 900px) {
+    .bodypage{
+        display: grid;
+        grid-template-columns: 18% auto;
+    
+        app-food-type{
+            background-color: bisque;
+            height: 100%;
+        }
+    
+        .menuheading{
+            display: grid;
+            grid-template-columns: 20vw 20vw 20vw;
+            justify-content: space-evenly;
+            align-items: center;
+            
+    
+            .headingname{
+                text-align: center;
+                display: inline-block;
+                padding: 0.1vh;
+            
+                h2{
+                    font-size: 2vh;
+                }
+            }
+            
+            .searchbar{
+                display: inline-flex;
+                background-color: white;
+                border-color: black;
+                border-radius: 50vw;
+                padding: 0.4vw 0.8vw;
+                align-items: center;
+                height: 2vw;
+                justify-content: center;
+                width: 20vw;            
+    
+                input{
+                    border-color: black;
+                    border-radius: 6px;
+                    height: 1.6vw;
+                    width: 16vw;
+                    font-size: 1.4vw;
+                }
+                button{
+                    cursor: pointer;
+                    border-color: black;
+                    border-radius: 6px;
+                    height: 2vw;
+                    width: 4vw;
+                    font-size: 1vw;
+                }
+                button:hover{
+                    background-color: rgb(201, 201, 201);
+                }
+            }
+        }
+        
+        .menubody{
+            display: none;
+            grid-template-columns: auto auto;
+            justify-content: center;
+        }
+    
+        .loading{
+            text-align: center;
+            display: block;
+            font-size: 2vw;
+            
+            .loader{
+                margin: 3vw auto;
+                border: 1vw solid #f3f3f3;
+                border-radius: 50%;
+                border-top: 1vw solid #3498db;
+                width: 10vw;
+                height: 10vw;
+                -webkit-animation: spin 2s linear infinite; /* Safari */
+                animation: spin 2s linear infinite;
+            }
+        }
+    }
+}
+
+
+@media only screen and (max-width: 500px) {
+    .bodypage{
+        display: grid;
+        grid-template-columns: 26% auto;
+    
+        app-food-type{
+            background-color: bisque;
+            height: 100%;
+        }
+    
+        .menuheading{
+            display: grid;
+            grid-template-columns: 50vw;
+            justify-content: space-evenly;
+            align-items: center;
+            
+    
+            .headingname{
+                text-align: center;
+                display: inline-block;
+                padding: 0.1vh;
+            
+                h2{
+                    font-size: 2.6vh;
+                }
+            }
+            
+            .searchbar{
+                display: inline-flex;
+                background-color: white;
+                border-color: black;
+                border-radius: 50vw;
+                padding: 0.2vw 0.6vw;
+                align-items: center;
+                height: 4vh;
+                justify-content: center;
+                width: 100%;            
+    
+                input{
+                    border-color: black;
+                    border-radius: 16px;
+                    height: 2vh;
+                    width: 80%;  
+                    font-size: 1.4vh;
+                }
+                button{
+                    cursor: pointer;
+                    border-color: black;
+                    border-radius: 16px;
+                    height: 2.6vh;
+                    width: 2.4vh;
+                    font-size: 1.4vh;
+                }
+                button:hover{
+                    background-color: rgb(201, 201, 201);
+                }
+            }
+        }
+        
+        .menubody{
+            margin-top: 1vh;
+            display: none;
+            grid-template-columns: auto;
+            justify-content: center;
+        }
+    
+        .loading{
+            text-align: center;
+            display: block;
+            font-size: 2vw;
+            margin-top: 8vh;
+            
+            .loader{
+                margin: 3vw auto;
+                border: 1vw solid #f3f3f3;
+                border-radius: 50%;
+                border-top: 1vw solid #3498db;
+                width: 16vw;
+                height: 16vw;
+                -webkit-animation: spin 2s linear infinite; /* Safari */
+                animation: spin 2s linear infinite;
+            }
+        }
+    }
 }
