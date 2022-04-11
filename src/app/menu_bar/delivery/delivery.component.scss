@@ -13,82 +13,86 @@
     padding-bottom: 1vw;
     text-align: center;
 
+    .deliveryheading{
+        font-size: 1.8vw;
+    }
+
     p{
         text-align: start;
         margin: 2vw auto auto 5vw;
     }
-}
 
-.deliverybody{
-    border-radius: 10px;
-    background-color: white;
-    display: grid;
-    height: 56vh;
-    width: 96%;
-    grid-template-columns: 60% 40%;
-    margin: 1vw auto 1vw auto;
-
-    .deliverycontent{
-
-        .contentheader{
-            font-size: 1.2vw;
-        }
-
-        table{
-            margin: 1vw auto 2vw auto;
-            border-collapse: collapse;
-            width: 90%;
-
-            th, td{
-                border-color: rgba(0, 0, 0, 0.226);
-                border-width: 1px;
-                border-style: solid;
-                padding: 1vw;
-            }
-
-            th{ background-color: rgb(255, 247, 221); }
-            tr:nth-child(odd){ background-color: rgb(255, 255, 255); }
-            tr:nth-child(even){ background-color: rgb(250, 250, 250); }
-            tr td:nth-child(1){ text-align: start; }
-            tr:hover{ background-color: rgb(210, 210, 210); }
-        }       
-        
-    }
-
-    .deliveryimage{
+    .deliverybody{
+        border-radius: 10px;
+        background-color: white;
         display: grid;
-        align-content: center;
+        height: max-content;
+        width: 96%;
+        grid-template-columns: 60% 40%;
+        margin: 1vw auto 1vw auto;
+    
+        .deliverycontent{
+    
+            .contentheader{
+                font-size: 1.2vw;
+            }
+    
+            table{
+                margin: 1vw auto 2vw auto;
+                border-collapse: collapse;
+                width: 90%;
+    
+                th, td{
+                    border-color: rgba(0, 0, 0, 0.226);
+                    border-width: 1px;
+                    border-style: solid;
+                    padding: 1vw;
+                }
+    
+                th{ background-color: rgb(255, 247, 221); }
+                tr:nth-child(odd){ background-color: rgb(255, 255, 255); }
+                tr:nth-child(even){ background-color: rgb(250, 250, 250); }
+                tr td:nth-child(1){ text-align: start; }
+                tr:hover{ background-color: rgb(210, 210, 210); }
+            }       
+            
+        }
+    
+        .deliveryimage{
+            display: grid;
+            padding-right: 2.4vw;
 
-        img{
-            margin-top: 2vw;
-            width: 90%;
-            height: 40vh;
-            animation-name: fade;
-            animation-duration: 6s;
-            animation-iteration-count: infinite;
+            img{
+                margin: 4.2vw auto 1vw auto;
+                width: 100%;
+                height: 20vw;
+                animation-name: fade;
+                animation-duration: 6s;
+                animation-iteration-count: infinite;
+            }
         }
     }
-}
 
-.contact{
-    text-align: center;
-    margin-top: 1vw;
-    a{
-        text-decoration: none;
-        cursor: none;
-        button{
-            @include border();
-            border-radius: 50vw;
-            width: max-content;
-            padding: 1vw 1.6vw;
-            background-color: rgb(255, 212, 133);
-            box-shadow: inset 0 -3em 3em rgb(255, 164, 28);
-            font-size: 1vw;
-        }
-        button:hover{
-            background-color: rgb(255, 174, 25);
-            box-shadow: inset 0 -3em 3em rgb(219, 132, 0);
-            cursor: pointer;
+    .contact{
+        text-align: center;
+        margin-top: 1vw;
+        a{
+            text-decoration: none;
+            cursor: none;
+            button{
+                @include border();
+                border-radius: 50vw;
+                width: max-content;
+                padding: 1vw 1.6vw;
+                background-color: rgb(255, 212, 133);
+                box-shadow: inset 0 -3em 3em rgb(255, 164, 28);
+                font-size: 1vw;
+            }
+            button:hover{
+                background-color: rgb(255, 174, 25);
+                box-shadow: inset 0 -3em 3em rgb(219, 132, 0);
+                cursor: pointer;
+            }
         }
     }
 }
@@ -97,3 +101,101 @@
     0% {opacity: 0}
     30% {opacity: 1}
 }
+
+
+@media only screen and (max-width: 1000px) {
+    .deliverybox{
+        @include border();
+        background-color: rgb(245, 245, 245);
+        margin: 2vw 6vw;
+        height: max-content;
+        padding-bottom: 1vw;
+        text-align: center;
+    
+        .deliveryheading{
+            font-size: 2.6vw;
+        }
+    
+        p{
+            text-align: start;
+            margin: 2vw auto auto 5vw;
+            font-size: 1.2vw;
+        }
+    
+        .deliverybody{
+            border-radius: 10px;
+            background-color: white;
+            display: grid;
+            height: max-content;
+            width: 96%;
+            grid-template-columns: auto;
+            margin: 1vw auto 1vw auto;
+        
+            .deliverycontent{
+        
+                .contentheader{
+                    font-size: 1.2vw;
+                }
+        
+                table{
+                    margin: 1vw auto 2vw auto;
+                    border-collapse: collapse;
+                    width: 90%;
+                    font-size: 1.2vw;
+        
+                    th, td{
+                        border-color: rgba(0, 0, 0, 0.226);
+                        border-width: 1px;
+                        border-style: solid;
+                        padding: 1vw;
+                    }
+        
+                    th{ background-color: rgb(255, 247, 221); }
+                    tr:nth-child(odd){ background-color: rgb(255, 255, 255); }
+                    tr:nth-child(even){ background-color: rgb(250, 250, 250); }
+                    tr td:nth-child(1){ text-align: start; }
+                    tr:hover{ background-color: rgb(210, 210, 210); }
+                }       
+                
+            }
+        
+            .deliveryimage{
+                display: grid;
+    
+                img{
+                    margin: 1.4vw auto;
+                    width: 50vw;
+                    height: 30vw;
+                    animation-name: fade;
+                    animation-duration: 6s;
+                    animation-iteration-count: infinite;
+                    object-fit: cover;
+                }
+            }
+        }
+    
+        .contact{
+            text-align: center;
+            margin-top: 1vw;
+            a{
+                text-decoration: none;
+                cursor: none;
+                button{
+                    @include border();
+                    border-radius: 50vw;
+                    width: max-content;
+                    padding: 1vw 1.6vw;
+                    background-color: rgb(255, 212, 133);
+                    box-shadow: inset 0 -3em 3em rgb(255, 164, 28);
+                    font-size: 1.6vw;
+                }
+                button:hover{
+                    background-color: rgb(255, 174, 25);
+                    box-shadow: inset 0 -3em 3em rgb(219, 132, 0);
+                    cursor: pointer;
+                }
+            }
+        }
+    } 
+}
+
