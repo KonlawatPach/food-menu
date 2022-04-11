@@ -8,6 +8,8 @@
     margin-top: 1vw;
     width: 14vw;
 
+    h4{ font-size: 1.2vw; }
+
     .typeimg{
         position: absolute;
         width: 3vw;
@@ -21,6 +23,7 @@
 
     .textbox{
         text-align: start;
+
         p{
             font-size: 1vw;
             text-overflow: ellipsis;
@@ -32,4 +35,42 @@
 
 .tablebox:hover{
     background-color: rgb(231, 231, 231);
+}
+
+
+@media only screen and (max-width: 600px) {
+    .tablebox{
+        border-color: rgb(126, 126, 126);
+        background-color: white;
+        border-width: 1px;
+        border-style: solid;
+        border-radius: 10px;
+        padding: 0vw 2vw;
+        margin-top: 1vw;
+        width: 18vw;
+    
+        h4{ font-size: 2vw; }
+    
+        .typeimg{
+            position: absolute;
+            width: 3vw;
+            height: 3vw;
+        }
+    
+        .statusimg{
+            width: 12vw;
+            height: 12vw;
+        }
+    
+        .textbox{
+            text-align: start;
+    
+            p{
+                font-size: 1.6vw;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                white-space: nowrap;
+            }
+        }
+    }
 }

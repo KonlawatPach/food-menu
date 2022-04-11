@@ -16,15 +16,18 @@
     .reserveheading{ font-size: 1.6vw; }
 
     .loading{
-        display:block;
+        text-align: center;
+        display: block;
+        font-size: 1vw;
+        margin-top: 5vw;
         
         .loader{
             margin: 3vw auto;
-            border: 16px solid #f3f3f3;
+            border: 1vw solid #f3f3f3;
             border-radius: 50%;
-            border-top: 16px solid #3498db;
-            width: 120px;
-            height: 120px;
+            border-top: 1vw solid #3498db;
+            width: 10vw;
+            height: 10vw;
             -webkit-animation: spin 2s linear infinite; /* Safari */
             animation: spin 2s linear infinite;
         }
@@ -39,15 +42,20 @@
     
     .imagedescription{
         @include border();
-        margin: 4vw 4vw 2vw 4vw;
+        margin: 4vw auto 2vw auto;
         height: max-content;
-        padding-bottom: 1vw;
+        width: max-content;
+        padding: 1vw 4vw;
         background-color: rgb(223, 223, 223);
+
+        h4{ font-size: 1.2vw; }
 
         .imagedes{
             display: grid;
-            grid-template-columns: repeat(6, 1fr);
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2vw;
             align-items: center;
+            font-size: 1vw;
             
             img{
                 @include border();
@@ -87,4 +95,94 @@
 @keyframes spin {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
+}
+
+
+@media only screen and (max-width: 600px) {
+    .reservebox{
+        @include border();
+        background-color: rgb(245, 245, 245);
+        margin: 2vw 6vw;
+        height: max-content;
+        padding-bottom: 1vw;
+        text-align: center;
+    
+        .reserveheading{ font-size: 2.6vw; }
+    
+        .loading{
+            text-align: center;
+            display: block;
+            font-size: 1vw;
+            margin-top: 5vw;
+            
+            .loader{
+                margin: 3vw auto;
+                border: 1vw solid #f3f3f3;
+                border-radius: 50%;
+                border-top: 1vw solid #3498db;
+                width: 10vw;
+                height: 10vw;
+                -webkit-animation: spin 2s linear infinite; /* Safari */
+                animation: spin 2s linear infinite;
+            }
+        }
+    
+        .reservebody{
+            display: none;
+            grid-template-columns: auto auto auto;
+            justify-content: center;
+            grid-column-gap: 2vw;
+        }
+        
+        .imagedescription{
+            @include border();
+            margin: 4vw auto 2vw auto;
+            height: max-content;
+            width: max-content;
+            padding: 1vw 4vw;
+            background-color: rgb(223, 223, 223);
+    
+            h4{ font-size: 1.2vw; }
+    
+            .imagedes{
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 2vw;
+                align-items: center;
+                font-size: 1vw;
+                
+                img{
+                    @include border();
+                    background-color: white;
+                    border-radius: 100%;
+                    padding: 0.4vw;
+                    width: 5vw;
+                    height: 5vw;
+                }
+            }
+        }
+    
+        .contact{
+            text-align: center;
+            margin-top: 1vw;
+            a{
+                text-decoration: none;
+                cursor: none;
+                button{
+                    @include border();
+                    border-radius: 50vw;
+                    width: max-content;
+                    padding: 1vw 1.6vw;
+                    background-color: rgb(255, 212, 133);
+                    box-shadow: inset 0 -3em 3em rgb(255, 164, 28);
+                    font-size: 1.6vw;
+                }
+                button:hover{
+                    background-color: rgb(255, 174, 25);
+                    box-shadow: inset 0 -3em 3em rgb(219, 132, 0);
+                    cursor: pointer;
+                }
+            }
+        }
+    }
 }
