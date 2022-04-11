@@ -42,12 +42,12 @@ ul{
         display: grid;
         align-items: center;
         background-color: $backgroundcolor;
-        grid-template-columns: 18vh 1fr;
+        grid-template-columns: 26vw 1fr;
     }
     
     .logo{
         text-align: center;
-        font-size: 1.2vh;
+        font-size: 2vw;
     }
     
     ul{
@@ -66,7 +66,7 @@ ul{
                 display: block;
                 text-decoration: none;
                 color: $textcolor;
-                font-size: 1vh;
+                font-size: 1.6vw;
             }
     
             a:hover{ background-color: rgb(255, 212, 159); }

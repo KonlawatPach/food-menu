@@ -122,10 +122,10 @@ app-alert-food{
             .headingname{
                 text-align: center;
                 display: inline-block;
-                padding: 0.1vh;
+                padding: 0.8vw;
             
                 h2{
-                    font-size: 2vh;
+                    font-size: 2.6vw;
                 }
             }
             
@@ -207,10 +207,10 @@ app-alert-food{
             .headingname{
                 text-align: center;
                 display: inline-block;
-                padding: 0.1vh;
+                padding: 0.8vw;
             
                 h2{
-                    font-size: 2.6vh;
+                    font-size: 3.6vw;
                 }
             }
             
@@ -221,24 +221,24 @@ app-alert-food{
                 border-radius: 50vw;
                 padding: 0.2vw 0.6vw;
                 align-items: center;
-                height: 4vh;
+                height: 6vw;
                 justify-content: center;
                 width: 100%;            
     
                 input{
                     border-color: black;
                     border-radius: 16px;
-                    height: 2vh;
+                    height: 3vw;
                     width: 80%;  
-                    font-size: 1.4vh;
+                    font-size: 2vw;
                 }
                 button{
                     cursor: pointer;
                     border-color: black;
                     border-radius: 16px;
-                    height: 2.6vh;
-                    width: 2.4vh;
-                    font-size: 1.4vh;
+                    height: 4vw;
+                    width: 16%;
+                    font-size: 2vw;
                 }
                 button:hover{
                     background-color: rgb(201, 201, 201);
@@ -247,7 +247,7 @@ app-alert-food{
         }
         
         .menubody{
-            margin-top: 1vh;
+            margin-top: 1.6vw;
             display: none;
             grid-template-columns: auto;
             justify-content: center;
@@ -257,7 +257,7 @@ app-alert-food{
             text-align: center;
             display: block;
             font-size: 2vw;
-            margin-top: 8vh;
+            margin-top: 10vw;
             
             .loader{
                 margin: 3vw auto;
