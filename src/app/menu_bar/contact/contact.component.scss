@@ -13,7 +13,7 @@
     padding-bottom: 2vw;
     text-align: center;
 
-    .contactheading{ font-size: 1.6vw; }
+    .contactheading{ font-size: 1.8vw; }
 
     .contactbody{
         background-color: white;
@@ -30,6 +30,12 @@
             .contactdata{
                 text-align: start;
                 line-height: 2;
+                p a{
+                    color: darkorange;
+                }
+                p a:hover{
+                    color: rgb(189, 104, 0);
+                }
             }
         }
 
